@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InC-nS-1Er">
+                                <rect key="frame" x="17" y="485" width="225" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="lxB-KY-eW9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Connect To BLE Device">
+                                    <color key="titleColor" red="0.15045551539999999" green="0.7608105302" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bntConnect:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b3M-5l-Gd4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSI: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUQ-E9-8y7">
+                                <rect key="frame" x="17" y="507" width="225" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="9Ph-Wv-9pc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.15045551539999999" green="0.7608105302" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YRN-Wd-iFH">
+                                <rect key="frame" x="79" y="466" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brody RC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juy-aQ-jhW">
+                                <rect key="frame" x="20" y="13" width="280" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="qXQ-aO-dIi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="5.8758228470000001e-05" green="0.037388095529999998" blue="0.7709960938" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="juy-aQ-jhW" secondAttribute="trailing" constant="20" symbolic="YES" id="DP3-Wc-5TC"/>
+                            <constraint firstItem="OUQ-E9-8y7" firstAttribute="leading" secondItem="InC-nS-1Er" secondAttribute="leading" id="Tpe-1W-3Yr"/>
+                            <constraint firstItem="YRN-Wd-iFH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="79" id="TxM-XI-34b"/>
+                            <constraint firstItem="OUQ-E9-8y7" firstAttribute="top" secondItem="YRN-Wd-iFH" secondAttribute="bottom" constant="21" id="WJ0-MF-9Km"/>
+                            <constraint firstAttribute="trailing" secondItem="InC-nS-1Er" secondAttribute="trailing" constant="78" id="YSF-7k-zhf"/>
+                            <constraint firstItem="OUQ-E9-8y7" firstAttribute="trailing" secondItem="InC-nS-1Er" secondAttribute="trailing" id="aY1-5m-rDT"/>
+                            <constraint firstItem="juy-aQ-jhW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="abd-0s-qHU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="OUQ-E9-8y7" secondAttribute="bottom" constant="44" id="eCg-hF-Tqc"/>
+                            <constraint firstItem="juy-aQ-jhW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="13" id="ihf-eS-aFM"/>
+                            <constraint firstItem="InC-nS-1Er" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="17" id="kF7-4Z-TXE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="InC-nS-1Er" secondAttribute="bottom" constant="47" id="mww-oW-ADY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblRSSI" destination="OUQ-E9-8y7" id="Yg7-dp-Xqj"/>
+                        <outlet property="spinner" destination="YRN-Wd-iFH" id="LrD-Nn-Wp9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
